@@ -1,0 +1,39 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="/css/space.css")
+        title Space
+    body 
+        #header 
+            .logo.item 
+                img(src="./img/logo.png", alt="logo")
+            .nav.item
+                if !user
+                    a(href='/login')
+                        btn#login.nav_btn Log In
+                else
+                    p.user_name= `Welcome, ${user.name}`
+                    button#logout.nav_btn.btn Log out
+
+        #container
+            .lf 
+                .para   
+                   p Empowering Seamless Virtual Connections: Your Go-To Destination for Online Meetings, Collaborations, and More, with our ConnectPeers.
+                .para2 
+                   p Experience effortless virtual meetings and collaborations with our ConnectPeers—a platform designed for seamless online communication and teamwork.
+            .rt
+                form.form-container
+                    h1#form_heading Join Space 
+                    .form-element 
+                        label(for='space_ID') Space ID : 
+                        input.input_text#spaceID(type="text", name="spaceID", value="")
+                    .form-btn-element 
+                        button.form_btn#space-btn Enter
+                    .line
+                    .form-btn
+                        button.form_btn#new-space-btn Create New Space
+        script(src="./js/sign.js") 
+            

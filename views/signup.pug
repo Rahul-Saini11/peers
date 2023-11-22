@@ -1,0 +1,32 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="./css/sign.css")
+        title Space | Sign up 
+    body 
+        .container
+            .lf
+                .logo  
+                    img.logo_img(src="./img/logo.png", alt="logo")
+                .form
+                    form.form-container.form-signup(method='POST')
+                        .form-element 
+                            p.form-title Sign Up 
+                        .form-element
+                            label.input_label(for="name") Name
+                            input.form-element_input#name(type="text", name="name", value="")
+                        .form-element
+                            label.input_label(for="email") Email
+                            input.form-element_input#email(type="email", name="email", value="") 
+                        .form-element 
+                            label.input_label(for="password") Password
+                            input.form-element_input#password(type="password", name="password",value="")
+                        .form-element 
+                            label.input_label(for="confirmPassword") Confirm Password
+                            input.form-element_input#confirmPassword(type="password", name="confirmPassword",value="",min="8")
+                        .form-element 
+                            button.form_btn#btn Sign Up
+        script(src="./js/sign.js")        

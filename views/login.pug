@@ -1,0 +1,32 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="/css/sign.css")
+        title Peers | Sign In
+    body
+      .container
+         .lf
+            .logo  
+               img.logo_img(src="./img/logo.png", alt="logo")
+            .form
+               form.form-container.form-login
+                  .form-element 
+                     p.form-title Log in
+                  .form-element
+                     label.input_label(for="email") Email
+                     input.form-element_input#login-email(type="email", name="email", value="") 
+                  .form-element 
+                     label.input_label(for="passoword") Password
+                     input.form-element_input#login-password(type="password", name="password", value="")
+                  .form-element 
+                     button.form_btn Log in
+                  .form-element 
+                     a.link(href="/signin") Forgot Passoword?
+                  .form-element 
+                     p No Account? 
+                        a.link(href="/signup") Create One  
+      script(src="./js/sign.js") 
+

@@ -1,0 +1,32 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="./css/style.css")
+        title Space | RoomID
+    body
+        #header 
+            p Room ID : #{spaceId}
+        #container 
+            #left-container
+              div.video-wrapper#user-1 
+                video#local-user.video(autoplay playsinline)
+                p.user-name_1 #{user.name} 
+            #right-container
+                #chats_box
+                    .input-chat_box
+                        input#input-chat(type="text", name="input-chat")
+                        button#chat-send_btn Send
+        #controls 
+            .control-btn#video-btn
+                img(src="./icon/video-enable.png", alt="icon", class='icon')
+                img(src="./icon/video-disable.png", alt="icon", class='icon video-disable')
+            .control-btn#audio-btn
+                img(src="./icon/mic.png", alt="icon", class='icon')
+                img(src="./icon/mic-disable.png", alt="icon", class='icon mic-disable')
+            .control-btn#leave-btn
+                img#leave(src="./icon/leave.png", alt="leave", class='icon')
+    script(src="/socket.io/socket.io.js") 
+    script(src="./bundle1.js") 
